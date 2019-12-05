@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"/>
+    <title> Калькулятор </title>
+</head>
+<body>
+    <form name="loandata">
+        <h1>Введите данные о ссуде</h1>
+        <table>
+            <tr>
+               <td>1)Размер ссуды</td>
+               <td><input type="text" name="principal" onchange="calculate();"> </td>
+            </tr>
+
+            <tr>
+                <td>2)Годовой процент</td>
+                <td><input type="text" name="interest" onchange="calculate();"></td>
+            </tr>
+
+            <tr>
+                <td>3)Срок сссуды в годах</td>
+                <td><input type="text" name="years" onchange="calculate();"></td>
+            </tr>
+
+            <tr><td></td>
+                <td><input type="button" value="Расчитать" onchange="calculate();"></td>
+            </tr>
+
+            <tr><td>Сведения о платежах</td></tr>
+            <tr>
+                <td>4)Ежемесячный платеж</td>
+                <td>$<span class="result" id="payment"></span></td>
+            </tr>
+
+            <tr>
+               <td>5)Общая сумма платежей</td>
+                <td>$<span class="result" id="total"></span></td>
+            </tr>
+
+            <tr>
+                <td>6)Общая сумма платежей по процентам</td>
+                <td>$<span class="result" id="totalinterest"></span></td>
+            </tr>
+        </table>
+    </form>
+<script src="js/CreditCalculator.js"></script>
+</body>
+</html>
